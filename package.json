@@ -1,0 +1,14 @@
+{
+  "name": "magic-slug",
+  "version": "1.0.0",
+  "author": "Michael Rhodes",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "adler32": "~0.1.7",
+    "numenc": "github:michaelrhodes/numenc#1.0.0"
+  }
+}
