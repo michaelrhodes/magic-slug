@@ -1,6 +1,7 @@
 var adler = require('adler32')
 var enc = require('numenc/encode')
 var dec = require('numenc/decode')
+var valid = /^[zothrvxsen]+$/
 
 var secret = process.env.MAGIC_SLUG_SECRET
 var offset = adler.sum(secret || 'M4g1C5LuG')
@@ -13,5 +14,5 @@ function encode (num) {
 }
 
 function decode (str) {
-  return dec(str) - offset
+  return valid.test(str) ? dec(str) - offset : null
 }
